@@ -9,11 +9,13 @@
 }
 .down-icon {
   width: 0.8em;
-  margin: 0 20px;
+  //height: 0.8em;
+  margin:  20px ;
 }
 
 .input-form {
   display: flex;
+  align-items: center;
 }
 .todo-input:focus-visible {
   outline: none;
