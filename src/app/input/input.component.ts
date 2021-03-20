@@ -48,7 +48,7 @@ export class InputComponent implements OnInit, AfterViewInit, OnDestroy {
       map((e: KeyboardEvent) =>
         (e.target as HTMLInputElement).value.replace(/ +/g, '')
       ),
-      debounceTime(300),
+      debounceTime(80),
       distinctUntilChanged()
     );
     this.inputSubscription = keyUp$.subscribe((v) => {
