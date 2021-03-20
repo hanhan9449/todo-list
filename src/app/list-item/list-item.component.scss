@@ -29,6 +29,12 @@
   margin-right: 5px;
   counter-increment: todo-count;
 }
+.item-text:focus-visible {
+  outline: 0;
+}
+.item-text {
+  flex-grow: 1;
+}
 
 .item-container:hover > .delete-button {
   visibility: visible;
