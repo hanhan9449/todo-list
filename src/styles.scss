@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/constants";
+
+body {
+  background-color: rgb(245, 245, 245);
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  height: 100vh;
+}

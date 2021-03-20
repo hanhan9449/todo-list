@@ -1,0 +1,27 @@
+.item-container {
+  background-color: white;
+  border: 1px transparent solid;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.delete-button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.05em;
+  color: #a91212;
+  visibility: hidden;
+  outline: none;
+  cursor: pointer;
+}
+.item-text::before {
+  content: counter(todo-count) ".";
+  margin-right: 5px;
+  counter-increment: todo-count;
+}
+.item-container:hover > .delete-button {
+  visibility: visible;
+}

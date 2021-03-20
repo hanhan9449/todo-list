@@ -1,0 +1,10 @@
+<form #inputForm (submit)="$event.preventDefault()">
+  <label>
+    <input
+      class="todo-input"
+      [value]=""
+      #todoInput
+      type="text"
+    >
+  </label>
+</form>

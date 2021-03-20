@@ -1,0 +1,6 @@
+<div class="item-container" *ngIf="showFlag">
+  <span class="item-text">
+  {{item.title}}
+  </span>
+  <button class="delete-button" (click)="deleteOne(item.id)">x</button>
+</div>
