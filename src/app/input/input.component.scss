@@ -1,15 +1,20 @@
 .todo-input {
-  padding: 20px 20px;
+  padding: 20px 5px;
   border: none;
   width: 100%;
   font-size: 1.2rem;
   box-sizing: border-box;
   font-weight: bold;
-  //color: rgb(110, 110, 110);
   color: var(--primary-color)
-
+}
+.down-icon {
+  width: 0.8em;
+  margin: 0 20px;
 }
 
+.input-form {
+  display: flex;
+}
 .todo-input:focus-visible {
   outline: none;
 }

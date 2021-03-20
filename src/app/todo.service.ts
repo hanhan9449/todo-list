@@ -1,4 +1,4 @@
-import { Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { TodoItemInterface } from './interfaces/todo-item.interface';
 
@@ -25,6 +25,20 @@ export class TodoService {
 
   inputTodoItem(s: string): any {
     this.input$.next(s);
+  }
+
+  updateTodoItem(id: number, item: TodoItemInterface): void {
+    this.list = this.list.map((it) => {
+      if (it.id === id) {
+        for (const k in item) {
+          if (k === 'id') {
+            continue;
+          }
+          it[k] = item[k];
+        }
+      }
+      return it;
+    });
   }
 
   submitTodoItem(s: string): Observable<TodoItemInterface> {

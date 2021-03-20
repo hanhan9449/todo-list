@@ -2,12 +2,14 @@
   background-color: white;
   border: 1px transparent solid;
   color: var(--primary-color);
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 10px 10px 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
+
 .delete-button {
   border: none;
   background-color: transparent;
@@ -16,12 +18,18 @@
   visibility: hidden;
   outline: none;
   cursor: pointer;
+  @media screen and (max-width: 450px) {
+    visibility: visible;
+
+  }
 }
+
 .item-text::before {
   content: counter(todo-count) ".";
   margin-right: 5px;
   counter-increment: todo-count;
 }
+
 .item-container:hover > .delete-button {
   visibility: visible;
 }

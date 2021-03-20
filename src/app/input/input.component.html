@@ -1,10 +1,9 @@
-<form #inputForm (submit)="$event.preventDefault()">
-  <label>
+<form #inputForm class="input-form" (submit)="$event.preventDefault()">
+    <img class="down-icon" src="../../assets/images/down.svg" alt="input">
     <input
       class="todo-input"
       [value]=""
       #todoInput
       type="text"
     >
-  </label>
 </form>
